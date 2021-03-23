@@ -1,0 +1,23 @@
+{
+	"manifest_version": 2,
+
+	"name": "Omegle IP info",
+
+	"description": "Prints IPs of Omegle strangers.",
+
+	"version": "1.0",
+
+	"author": "fantoro",
+	"homepage_url": "https://fantorovevo.com/",
+
+	"web_accessible_resources": [
+		"main.js"
+	],
+
+	"content_scripts": [
+		{
+			"matches": ["*://*.omegle.com/*"],
+			"js": ["loader.js"]
+		}
+	]
+}
