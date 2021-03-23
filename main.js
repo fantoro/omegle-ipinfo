@@ -1,8 +1,5 @@
 const apiUrl = "https://fantorovevo.com";
 
-// This code can break at any time but I didn't feel like completely reversing Omegle's
-// JavaScript cuz it's (obviously) written to be hard to read so I'm just creating
-// all the elements n stuff myself lol
 function printInChat(msg) {
 	let logbox = document.getElementsByClassName("logbox")[0];
 	let log = logbox.children[0];
