@@ -1,4 +1,4 @@
-let scriptUrl = browser.runtime.getURL("main.js");
+let scriptUrl = chrome.runtime.getURL("main.js");
 
 window.onload = function() {
 	let script = document.createElement("SCRIPT");
