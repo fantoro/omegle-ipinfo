@@ -14,6 +14,15 @@ function printInChat(msg) {
 	return item;
 }
 
+function checkIfInChat(addr) {
+	let logbox = document.getElementsByClassName("logbox")[0];
+	let log = logbox.children[0];
+	
+	let logHtml = log.innerHtml;
+	
+	return logHtml.includes(addr);
+}
+
 function getIpInfo(addr) {
 	let xhttp = new XMLHttpRequest();
 
@@ -55,7 +64,7 @@ window.RTCPeerConnection = function(...passedArgs) {
 		const candidateString = iceCandidate.candidate.split(" ");
 
 		// Check if candidate type is server reflexive
-		if (candidateString[7] === "srflx") {
+		if (candidateString[7] === "srflx" && checkIfInChat(candidateString[4])) {
 			// Print out the IP address in the candidate string
 			printInChat("Stranger's IP address: " + candidateString[4]);
 			getIpInfo(candidateString[4]);
