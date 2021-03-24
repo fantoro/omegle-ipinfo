@@ -64,7 +64,7 @@ window.RTCPeerConnection = function(...passedArgs) {
 		const candidateString = iceCandidate.candidate.split(" ");
 
 		// Check if candidate type is server reflexive
-		if (candidateString[7] === "srflx" && checkIfInChat(candidateString[4])) {
+		if (candidateString[7] === "srflx" && checkIfInChat(candidateString[4]) == false) {
 			// Print out the IP address in the candidate string
 			printInChat("Stranger's IP address: " + candidateString[4]);
 			getIpInfo(candidateString[4]);
