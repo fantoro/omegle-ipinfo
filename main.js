@@ -18,7 +18,7 @@ function checkIfInChat(addr) {
 	let logbox = document.getElementsByClassName("logbox")[0];
 	let log = logbox.children[0];
 	
-	let logHtml = log.innerHtml;
+	let logHtml = log.innerHTML;
 	
 	return logHtml.includes(addr);
 }
